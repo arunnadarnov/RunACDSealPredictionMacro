@@ -1,0 +1,8 @@
+[
+    {
+        "source_file": "C:\\Arun\\scripts\\python\\RunMacro\\InputFiles\\ShiftReport 0314202306-00.csv",
+        "required_columns": ["Timestamp", "MPD_SERIAL", "CLIENT", "BHT(deg F)"],
+        "destination_file": "C:\\Arun\\scripts\\python\\RunMacro\\InputFiles\\ACD Data Analysis Tools 2023A.xlsm",
+        "destination_sheet": "Data"
+    }
+]

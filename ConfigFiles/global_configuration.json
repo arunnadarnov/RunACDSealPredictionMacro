@@ -1,0 +1,19 @@
+[
+    {
+        "s3_bucket": "app04d2-dev-acdseal-fileuploads",
+        "input_files_folder": "C:\\Arun\\scripts\\python\\RunMacro\\InputFiles",
+        "source_file": "C:\\Arun\\scripts\\python\\RunMacro\\InputFiles\\ShiftReport 0314202306-00.csv",
+        "destination_file": "C:\\Arun\\scripts\\python\\RunMacro\\InputFiles\\ACD Data Analysis Tools 2023A.xlsm",
+        "destination_sheet": "Data",
+        "columns_to_find": [
+            {
+                "column_name": "MD_HOLE(m)",
+                "cell_to_update": "J101"
+            },
+            {
+                "column_name": "PROCEDURE_NO",
+                "cell_to_update": "J102"
+            }
+        ]
+    }
+]
