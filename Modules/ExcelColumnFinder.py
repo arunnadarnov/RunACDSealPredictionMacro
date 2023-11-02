@@ -1,5 +1,6 @@
 import pandas as pd
 import xlwings as xw
+import re
 
 class ExcelColumnFinder:
     """Finds a column in an Excel file and writes the cell details to another sheet."""
@@ -28,9 +29,19 @@ class ExcelColumnFinder:
         # Search for each column name
         for column_info in self.columns_to_find:
             column_name = column_info['column_name']
-            if column_name in df1.columns:
+            
+            # Get full column name from Excel sheet (case insensitive)
+            full_column_name = next((col for col in df1.columns if col.lower().startswith(column_name.lower())), None)
+            
+            if full_column_name:
                 # Get the cell details (row number and column number)
-                row_num = df1.columns.get_loc(column_name) + 2  # +2 because pandas' index is 0-based and Excel's index is 1-based, and the header is in the second row
+                row_num = df1.columns.get_loc(full_column_name) + 2  # +2 because pandas' index is 0-based and Excel's index is 1-based, and the header is in the second row
                 sheet2.range(column_info['cell_to_update']).value = row_num
+                
+                # Extract unit of measurement from column name
+                match = re.search(r'\((.*?)\)', full_column_name)
+                if match:
+                    unit_of_measurement = match.group(1)
+                    print(f"Unit of measurement for '{full_column_name}' is '{unit_of_measurement}'")
             else:
                 print(f"Column '{column_name}' not found.")
