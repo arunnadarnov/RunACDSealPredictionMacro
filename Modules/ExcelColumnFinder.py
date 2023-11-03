@@ -29,6 +29,7 @@ class ExcelColumnFinder:
         # Search for each column name
         for column_info in self.columns_to_find:
             column_name = column_info['column_name']
+            print (f"Column Name - {column_name}")
             
             # Get full column name from Excel sheet (case insensitive)
             full_column_name = next((col for col in df1.columns if col.lower().startswith(column_name.lower())), None)
@@ -43,5 +44,9 @@ class ExcelColumnFinder:
                 if match:
                     unit_of_measurement = match.group(1)
                     print(f"Unit of measurement for '{full_column_name}' is '{unit_of_measurement}'")
+                    sheet2.range(column_info['unit_cell_to_update']).value = unit_of_measurement
             else:
                 print(f"Column '{column_name}' not found.")
+        
+        # Save the workbook after writing the cell details
+        self.workbook.save()

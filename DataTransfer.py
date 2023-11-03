@@ -52,7 +52,7 @@ class DataTransfer:
                 print(f"Unsupported file type '{file_extension}' in the config file.")
 
 # Config file
-config_file = r"C:\Arun\scripts\python\RunMacro\Application\ConfigFiles\global_configuration.json"
+config_file = r"C:\Arun\scripts\python\RunACDSealPredictionMacro\Application\ConfigFiles\global_configuration.json"
 
 # Create an instance of class DataTransfer and call function transfer_data
 data_transfer = DataTransfer(config_file)

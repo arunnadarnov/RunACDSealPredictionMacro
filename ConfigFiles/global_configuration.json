@@ -7,12 +7,44 @@
         "destination_sheet": "Data",
         "columns_to_find": [
             {
-                "column_name": "MD_HOLE(m)",
-                "cell_to_update": "J101"
+                "column_name": "MD_HOLE",
+                "cell_to_update": "J101",
+                "unit_cell_to_update": "L101"
             },
             {
-                "column_name": "PROCEDURE_NO",
-                "cell_to_update": "J102"
+                "column_name": "MD_BIT",
+                "cell_to_update": "J102",
+                "unit_cell_to_update": "L102"
+            },
+            {
+                "column_name": "U_ACD_PRESS",
+                "cell_to_update": "J103",
+                "unit_cell_to_update": "L103"
+            },
+            {
+                "column_name": "L_ACD_PRESS",
+                "cell_to_update": "J104",
+                "unit_cell_to_update": "L104"
+            },
+            {
+                "column_name": "DSIT_CLOSE_PRESS",
+                "cell_to_update": "J105",
+                "unit_cell_to_update": "L105"
+            },
+            {
+                "column_name": "LUBRICATION_PRESS",
+                "cell_to_update": "J106",
+                "unit_cell_to_update": "L106"
+            },
+            {
+                "column_name": "RPM",
+                "cell_to_update": "J109",
+                "unit_cell_to_update": "L109"
+            },
+            {
+                "column_name": "HOOKLOAD",
+                "cell_to_update": "J110",
+                "unit_cell_to_update": "L110"
             }
         ]
     }
