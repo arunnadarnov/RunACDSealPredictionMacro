@@ -1,7 +1,7 @@
 import os
 import pandas as pd
-import json
 import xlwings as xw
+from datetime import datetime
 
 class CsvDataTransfer:
     """Handles data transfer from CSV files."""
@@ -18,8 +18,11 @@ class CsvDataTransfer:
         # Load CSV file into a DataFrame
         df1 = pd.read_csv(config['source_file'], index_col='Timestamp')
 
-        # Convert 'Timestamp' column to string format
-        #df1['Timestamp'] = df1['Timestamp'].astype(str)
+        # Remove duplicate rows
+        df1 = df1.drop_duplicates()
+
+        # Convert 'Timestamp' column to specified format
+        df1.index = pd.to_datetime(df1.index).strftime('%d-%b-%Y %I:%M:%S %p')
 
         # Check if there is any data in the source CSV file
         if df1.empty:
@@ -46,4 +49,4 @@ class CsvDataTransfer:
 
         # Save and close the workbook
         destination_wb.save()
-        destination_wb.close()
+        #destination_wb.close()

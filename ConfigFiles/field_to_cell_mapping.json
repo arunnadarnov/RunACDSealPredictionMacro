@@ -1,0 +1,76 @@
+{
+    "acd": [
+        {"field_name": "Window Start", "data_cell": "M102", "uom_cell": ""},
+        {"field_name": "Window End", "data_cell": "M103", "uom_cell": ""},
+        {"field_name": "Available Data, hh:mm:ss", "data_cell": "M104", "uom_cell": ""},
+        {"field_name": "ACD Active, hh:mm:ss", "data_cell": "M105", "uom_cell": ""},
+        {"field_name": "Drilling Time, hh:mm:ss", "data_cell": "M106", "uom_cell": ""},
+        {"field_name": "Stripping Time, hh:mm:ss", "data_cell": "M107", "uom_cell": ""},
+        {"field_name": "In-Slips Time, hh:mm:ss", "data_cell": "M108", "uom_cell": ""},
+        {"field_name": "Lube Pump Active Time, hh:mm:ss", "data_cell": "M109", "uom_cell": ""},
+        {"field_name": "Hole Measured Depth In", "data_cell": "M111", "uom_cell": "X111"},
+        {"field_name": "Hole Measured Depth Out", "data_cell": "M112", "uom_cell": "X112"},
+        {"field_name": "New Hole Drilled", "data_cell": "M113", "uom_cell": "X113"},
+        {"field_name": "Drilled length", "data_cell": "M114", "uom_cell": "X114"},
+        {"field_name": "Stripped length", "data_cell": "M115", "uom_cell": "X115"},
+        {"field_name": "Average ROP, ft/hr", "data_cell": "M116", "uom_cell": ""},
+        {"field_name": "Pipe OD, in", "data_cell": "M118", "uom_cell": ""},
+        {"field_name": "Tool Joint OD, in", "data_cell": "M119", "uom_cell": ""},
+        {"field_name": "Total Revolutions, krev", "data_cell": "M120", "uom_cell": ""},
+        {"field_name": "Average RPM", "data_cell": "M121", "uom_cell": ""},
+        {"field_name": "Maximum RPM", "data_cell": "M122", "uom_cell": ""},
+        {"field_name": "Total Rotary Displacement", "data_cell": "M123", "uom_cell": "X21"},
+        {"field_name": "Total Axial Displacement", "data_cell": "M124", "uom_cell": "X22"},
+        {"field_name": "Total Displacement", "data_cell": "M125", "uom_cell": "X23"},
+        {"field_name": "Axial/Rotary Displacement, %", "data_cell": "M126", "uom_cell": ""},
+        {
+            "field_name": "UACD: Rotated Tool Joints",
+            "pivot_table": {"Total": "M129", "TJ1": "S129", "TJ2": "U129", "TJ3": "W129"}
+        },
+        {
+            "field_name": "UACD: Stripped Tool Joints",
+            "pivot_table": {"Total": "M130", "TJ1": "S130", "TJ2": "U130", "TJ3": "W130"}
+        },
+        {
+            "field_name": "LACD: Rotated Tool Joints",
+            "pivot_table": {"Total": "M132", "TJ1": "S132", "TJ2": "U132", "TJ3": "W132"}
+        },
+        {
+            "field_name": "LACD: Stripped Tool Joints",
+            "pivot_table": {"Total": "M133", "TJ1": "S133", "TJ2": "U133", "TJ3": "W133"}
+        },
+        {"field_name": "UACD: Equivalent Drilled Footage", "data_cell": "M135", "uom_cell": "X135"},
+        {"field_name": "UACD: Equivalent Stripped Footage", "data_cell": "M136", "uom_cell": "X136"},
+        {"field_name": "LACD: Equivalent Drilled Footage", "data_cell": "M138", "uom_cell": "X138"},
+        {"field_name": "LACD: Equivalent Stripped Footage", "data_cell": "M139", "uom_cell": "X139"},
+        {"field_name": "UACD: Applied Mechanical Energy, ft-lb", "data_cell": "M141", "uom_cell": ""},
+        {"field_name": "LACD: Applied Mechanical Energy, ft-lb", "data_cell": "M142", "uom_cell": ""},
+        {"field_name": "UACD: Effective Mechanical Energy, ft-lb", "data_cell": "M144", "uom_cell": ""},
+        {"field_name": "LACD: Effective Mechanical Energy, ft-lb", "data_cell": "M145", "uom_cell": ""},
+        {"field_name": "UACD: Combined Energy Formula, ft-lb", "data_cell": "M147", "uom_cell": ""},
+        {"field_name": "LACD: Combined Energy Formula, ft-lb", "data_cell": "M148", "uom_cell": ""}
+    ],
+    "dsit": [
+        {"field_name": "Window Start", "data_cell": "M151", "uom_cell": ""},
+        {"field_name": "Window End", "data_cell": "M152", "uom_cell": ""},
+        {"field_name": "Available Data, hh:mm:ss", "data_cell": "M153", "uom_cell": ""},
+        {"field_name": "DSIT Active, hh:mm:ss", "data_cell": "M154", "uom_cell": ""},
+        {"field_name": "Drilled length", "data_cell": "M156", "uom_cell": "X156"},
+        {"field_name": "Stripped length", "data_cell": "M157", "uom_cell": "X157"},
+        {"field_name": "Total Revolutions, rev", "data_cell": "M159", "uom_cell": "X159"},
+        {"field_name": "Total Rotary Displacement", "data_cell": "M160", "uom_cell": "X160"},
+        {"field_name": "Total Axial Displacement", "data_cell": "M161", "uom_cell": "X161"},
+        {"field_name": "Total Displacement", "data_cell": "M162", "uom_cell": "X162"},
+        {"field_name": "Rotary/Axial Displacement, %", "data_cell": "M163", "uom_cell": "X163"},
+        {
+            "field_name": "DSIT: Rotated Tool Joints",
+            "pivot_table": {"Total": "M166", "TJ1": "S166", "TJ2": "U166", "TJ3": "W166"}
+        },
+        {
+            "field_name": "DSIT: Stripped Tool Joints",
+            "pivot_table": {"Total": "M167", "TJ1": "S167", "TJ2": "U167", "TJ3": "W167"}
+        },
+        {"field_name": "DSIT: Equivalent Stripped Footage", "data_cell": "M169", "uom_cell": "X169"},
+        {"field_name": "Closure Cycles", "data_cell": "M171", "uom_cell": ""}
+    ]
+}

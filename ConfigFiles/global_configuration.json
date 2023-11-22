@@ -1,51 +1,51 @@
 [
     {
         "s3_bucket": "app04d2-dev-acdseal-fileuploads",
-        "input_files_folder": "C:\\Arun\\scripts\\python\\RunMacro\\InputFiles",
-        "source_file": "C:\\Arun\\scripts\\python\\RunMacro\\InputFiles\\ShiftReport 0314202306-00.csv",
-        "destination_file": "C:\\Arun\\scripts\\python\\RunMacro\\InputFiles\\ACD Data Analysis Tools 2023A.xlsm",
+        "input_files_folder": "C:\\Arun\\scripts\\python\\RunACDSealPredictionMacro\\InputFiles",
+        "destination_file": "C:\\Arun\\scripts\\python\\RunACDSealPredictionMacro\\InputFiles\\DAT SET4 2023A.xlsm",
         "destination_sheet": "Data",
         "columns_to_find": [
-            {
-                "column_name": "MD_HOLE",
-                "cell_to_update": "J101",
-                "unit_cell_to_update": "L101"
-            },
-            {
-                "column_name": "MD_BIT",
-                "cell_to_update": "J102",
-                "unit_cell_to_update": "L102"
-            },
-            {
-                "column_name": "U_ACD_PRESS",
-                "cell_to_update": "J103",
-                "unit_cell_to_update": "L103"
-            },
-            {
-                "column_name": "L_ACD_PRESS",
-                "cell_to_update": "J104",
-                "unit_cell_to_update": "L104"
-            },
-            {
-                "column_name": "DSIT_CLOSE_PRESS",
-                "cell_to_update": "J105",
-                "unit_cell_to_update": "L105"
-            },
-            {
-                "column_name": "LUBRICATION_PRESS",
-                "cell_to_update": "J106",
-                "unit_cell_to_update": "L106"
-            },
-            {
-                "column_name": "RPM",
-                "cell_to_update": "J109",
-                "unit_cell_to_update": "L109"
-            },
-            {
-                "column_name": "HOOKLOAD",
-                "cell_to_update": "J110",
-                "unit_cell_to_update": "L110"
-            }
-        ]
+            
+            {"field_name": "Hole MD", "column_name": "MD HOLE(ft)", "cell_to_update": "J101", "unit_cell_to_update": "L101"},
+            {"field_name": "Bit MD", "column_name": "MD BIT(ft)", "cell_to_update": "J102", "unit_cell_to_update": "L102"},
+            {"field_name": "UACD Close Pressure", "column_name": "UACD CLOSE PRESS(psi)", "cell_to_update": "J103", "unit_cell_to_update": "L103"},
+            {"field_name": "LACD Close Pressure", "column_name": "LACD CLOSE PRESS(psi)", "cell_to_update": "J104", "unit_cell_to_update": "L104"},
+            {"field_name": "DSIT Close Pressure", "column_name": "DSIT CLOSE PRESS(psi)", "cell_to_update": "J105", "unit_cell_to_update": "L105"},
+            {"field_name": "Lubrication Pressure", "column_name": "LUBRICATION PRESS(psi)", "cell_to_update": "J106", "unit_cell_to_update": "L106"},
+            {"field_name": "Wellbore Pressure", "column_name": "FlowSpool Press VOTED(psi)", "cell_to_update": "J107", "unit_cell_to_update": "L107"},
+            {"field_name": "Block Height", "column_name": "BLOCK HEIGHT(ft)", "cell_to_update": "J108", "unit_cell_to_update": "L108"},
+            {"field_name": "Drillpipe RPM", "column_name": "RPM", "cell_to_update": "J109", "unit_cell_to_update": "L109"},
+            {"field_name": "Hookload", "column_name": "HOOKLOAD(lbs)", "cell_to_update": "J110", "unit_cell_to_update": "L110"},
+            {"field_name": "Lube Pump Flow In", "column_name": "ACD FLOW IN(gpm)", "cell_to_update": "J111", "unit_cell_to_update": "L111"},
+            {"field_name": "Flow In", "column_name": "WELL FLOW IN(gpm)", "cell_to_update": "J112", "unit_cell_to_update": "L112"}
+        ],
+        "cells_to_update": [
+            {"field_name": "Date & Time", "cell_to_update": "J100", "value_to_update": 1},
+            {"field_name": "In-Slips Threshold", "cell_to_update": "J61", "value_to_update": 80},
+            {"field_name": "Rotary On Threshold", "cell_to_update": "J62", "value_to_update": 10},
+            {"field_name": "Drillpipe Body Diameter", "cell_to_update": "J63", "value_to_update": 6.625},
+            {"field_name": "Tool Joint Diameter", "cell_to_update": "J64", "value_to_update": 8.5},
+            {"field_name": "Tool Joint Length / Block Size", "cell_to_update": "J65", "value_to_update": 0.8},
+            {"field_name": "Detection Factor", "cell_to_update": "J66", "value_to_update": 0.6},
+            {"field_name": "Number of TJ Positions", "cell_to_update": "J67", "value_to_update": 3},
+            {"field_name": "Tool Joint Contact Pressure Increase", "cell_to_update": "J68", "value_to_update": 400},
+            {"field_name": "Contact Length, in", "cell_to_update": "J69", "value_to_update": 8},
+            {"field_name": "Flow Block Size", "cell_to_update": "J71", "value_to_update": 0.01},
+            {"field_name": "Min Detection Flow Time, s", "cell_to_update": "J72", "value_to_update": 5},
+            {"field_name": "Block Denominator", "cell_to_update": "J73", "value_to_update": 3},
+            {"field_name": "UACD TJ1", "cell_to_update": "J81", "value_to_update": 123},
+            {"field_name": "UACD TJ2", "cell_to_update": "J82", "value_to_update": 78},
+            {"field_name": "UACD TJ3", "cell_to_update": "J83", "value_to_update": 35},
+            {"field_name": "UACD TJ4", "cell_to_update": "J84", "value_to_update": ""},
+            {"field_name": "LACD TJ1", "cell_to_update": "J86", "value_to_update": 111},
+            {"field_name": "LACD TJ2", "cell_to_update": "J87", "value_to_update": 66},
+            {"field_name": "LACD TJ3", "cell_to_update": "J88", "value_to_update": 24},
+            {"field_name": "LACD TJ4", "cell_to_update": "J89", "value_to_update": ""},
+            {"field_name": "DSIT TJ1", "cell_to_update": "J91", "value_to_update": 107},
+            {"field_name": "DSIT TJ2", "cell_to_update": "J92", "value_to_update": 62},
+            {"field_name": "DSIT TJ3", "cell_to_update": "J93", "value_to_update": 20},
+            {"field_name": "DSIT TJ4", "cell_to_update": "J94", "value_to_update": ""}
+        ],
+        "macro_to_run": "C_ToolJoints.G_ToolJointsStats"
     }
 ]

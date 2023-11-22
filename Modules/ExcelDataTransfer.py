@@ -1,6 +1,5 @@
 import os
 import pandas as pd
-import json
 import xlwings as xw
 
 class ExcelDataTransfer:
@@ -44,7 +43,7 @@ class ExcelDataTransfer:
 
             # Save and close the workbook
             destination_wb.save()
-            destination_wb.close()
+            #destination_wb.close()
 
             # Exit the loop over the sheets as soon as we find one with data
             break
