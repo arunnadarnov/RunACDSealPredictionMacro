@@ -11,8 +11,10 @@ ConfigFiles\global_configuration.json
 Modules\
     ConfigValidator.py
     CsvDataTransfer.py
+    ExcelCellUpdater.py
     ExcelColumnFinder.py
     ExcelDataTransfer.py
+    ExcelValueExtractor.py
     S3Downloader.py
 DataTransfer.py
 ```
