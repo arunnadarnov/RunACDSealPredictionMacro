@@ -5,46 +5,129 @@
         "destination_file": "C:\\Arun\\scripts\\python\\RunACDSealPredictionMacro\\InputFiles\\DAT SET4 2023A.xlsm",
         "destination_sheet": "Data",
         "columns_to_find": [
-            
-            {"field_name": "Hole MD", "column_name": "MD HOLE(ft)", "cell_to_update": "J101", "unit_cell_to_update": "L101"},
-            {"field_name": "Bit MD", "column_name": "MD BIT(ft)", "cell_to_update": "J102", "unit_cell_to_update": "L102"},
-            {"field_name": "UACD Close Pressure", "column_name": "UACD CLOSE PRESS(psi)", "cell_to_update": "J103", "unit_cell_to_update": "L103"},
-            {"field_name": "LACD Close Pressure", "column_name": "LACD CLOSE PRESS(psi)", "cell_to_update": "J104", "unit_cell_to_update": "L104"},
-            {"field_name": "DSIT Close Pressure", "column_name": "DSIT CLOSE PRESS(psi)", "cell_to_update": "J105", "unit_cell_to_update": "L105"},
-            {"field_name": "Lubrication Pressure", "column_name": "LUBRICATION PRESS(psi)", "cell_to_update": "J106", "unit_cell_to_update": "L106"},
-            {"field_name": "Wellbore Pressure", "column_name": "FlowSpool Press VOTED(psi)", "cell_to_update": "J107", "unit_cell_to_update": "L107"},
-            {"field_name": "Block Height", "column_name": "BLOCK HEIGHT(ft)", "cell_to_update": "J108", "unit_cell_to_update": "L108"},
-            {"field_name": "Drillpipe RPM", "column_name": "RPM", "cell_to_update": "J109", "unit_cell_to_update": "L109"},
-            {"field_name": "Hookload", "column_name": "HOOKLOAD(lbs)", "cell_to_update": "J110", "unit_cell_to_update": "L110"},
-            {"field_name": "Lube Pump Flow In", "column_name": "ACD FLOW IN(gpm)", "cell_to_update": "J111", "unit_cell_to_update": "L111"},
-            {"field_name": "Flow In", "column_name": "WELL FLOW IN(gpm)", "cell_to_update": "J112", "unit_cell_to_update": "L112"}
+            {"field_name": "Date & Time", "cell_to_update": "J100", "column_name_key": "placeholder", "unit_cell_to_update": "placeholder", "value_to_update": 1},
+            {
+                "field_name": "Hole MD",
+                "cell_to_update": "J101",
+                "unit_cell_to_update": "L101",
+                "attribute_name": "holeMD",
+                "column_name_key": "columnName.S",
+                "unit_of_measurement_key": "unitOfMeasurement.S"
+            },
+            {
+                "field_name": "Bit MD",
+                "cell_to_update": "J102",
+                "unit_cell_to_update": "L102",
+                "attribute_name": "bitMD",
+                "column_name_key": "columnName.S",
+                "unit_of_measurement_key": "unitOfMeasurement.S"
+            },
+            {
+                "field_name": "UACD Close Pressure",
+                "cell_to_update": "J103",
+                "unit_cell_to_update": "L103",
+                "attribute_name": "uacdClosePressure",
+                "column_name_key": "columnName.S",
+                "unit_of_measurement_key": "unitOfMeasurement.S"
+            },
+            {
+                "field_name": "LACD Close Pressure",
+                "cell_to_update": "J104",
+                "unit_cell_to_update": "L104",
+                "attribute_name": "lACDClosePressure",
+                "column_name_key": "columnName.S",
+                "unit_of_measurement_key": "unitOfMeasurement.S"
+              },
+              {
+                "field_name": "DSIT Close Pressure",
+                "cell_to_update": "J105",
+                "unit_cell_to_update": "L105",
+                "attribute_name": "dSITClosePressure",
+                "column_name_key": "columnName.S",
+                "unit_of_measurement_key": "unitOfMeasurement.S"
+              },
+              {
+                "field_name": "Lubrication Pressure",
+                "cell_to_update": "J106",
+                "unit_cell_to_update": "L106",
+                "attribute_name": "lubricationPressure",
+                "column_name_key": "columnName.S",
+                "unit_of_measurement_key": "unitOfMeasurement.S"
+              },
+              {
+                "field_name": "Wellbore Pressure",
+                "cell_to_update": "J107",
+                "unit_cell_to_update": "L107",
+                "attribute_name": "wellborePressure",
+                "column_name_key": "columnName.S",
+                "unit_of_measurement_key": "unitOfMeasurement.S"
+              },
+              {
+                "field_name": "Block Height",
+                "cell_to_update": "J108",
+                "unit_cell_to_update": "L108",
+                "attribute_name": "blockHeight",
+                "column_name_key": "columnName.S",
+                "unit_of_measurement_key": "unitOfMeasurement.S"
+              },
+              {
+                "field_name": "Drillpipe RPM",
+                "cell_to_update": "J109",
+                "unit_cell_to_update": "L109",
+                "attribute_name": "drillpipeRPM",
+                "column_name_key": "columnName.S",
+                "unit_of_measurement_key": "unitOfMeasurement.S"
+              },
+              {
+                "field_name": "Hookload",
+                "cell_to_update": "J110",
+                "unit_cell_to_update": "L110",
+                "attribute_name": "hookload",
+                "column_name_key": "columnName.S",
+                "unit_of_measurement_key": "unitOfMeasurement.S"
+              },
+              {
+                "field_name": "Lube Pump Flow In",
+                "cell_to_update": "J111",
+                "unit_cell_to_update": "L111",
+                "attribute_name": "lubePumpFlowIn",
+                "column_name_key": "columnName.S",
+                "unit_of_measurement_key": "unitOfMeasurement.S"
+              },
+              {
+                "field_name": "Flow In",
+                "cell_to_update": "J112",
+                "unit_cell_to_update": "L112",
+                "attribute_name": "flowIn",
+                "column_name_key": "columnName.S",
+                "unit_of_measurement_key": "unitOfMeasurement.S"
+              }
         ],
         "cells_to_update": [
-            {"field_name": "Date & Time", "cell_to_update": "J100", "value_to_update": 1},
-            {"field_name": "In-Slips Threshold", "cell_to_update": "J61", "value_to_update": 80},
-            {"field_name": "Rotary On Threshold", "cell_to_update": "J62", "value_to_update": 10},
-            {"field_name": "Drillpipe Body Diameter", "cell_to_update": "J63", "value_to_update": 6.625},
-            {"field_name": "Tool Joint Diameter", "cell_to_update": "J64", "value_to_update": 8.5},
-            {"field_name": "Tool Joint Length / Block Size", "cell_to_update": "J65", "value_to_update": 0.8},
-            {"field_name": "Detection Factor", "cell_to_update": "J66", "value_to_update": 0.6},
-            {"field_name": "Number of TJ Positions", "cell_to_update": "J67", "value_to_update": 3},
-            {"field_name": "Tool Joint Contact Pressure Increase", "cell_to_update": "J68", "value_to_update": 400},
-            {"field_name": "Contact Length, in", "cell_to_update": "J69", "value_to_update": 8},
-            {"field_name": "Flow Block Size", "cell_to_update": "J71", "value_to_update": 0.01},
-            {"field_name": "Min Detection Flow Time, s", "cell_to_update": "J72", "value_to_update": 5},
-            {"field_name": "Block Denominator", "cell_to_update": "J73", "value_to_update": 3},
-            {"field_name": "UACD TJ1", "cell_to_update": "J81", "value_to_update": 123},
-            {"field_name": "UACD TJ2", "cell_to_update": "J82", "value_to_update": 78},
-            {"field_name": "UACD TJ3", "cell_to_update": "J83", "value_to_update": 35},
-            {"field_name": "UACD TJ4", "cell_to_update": "J84", "value_to_update": ""},
-            {"field_name": "LACD TJ1", "cell_to_update": "J86", "value_to_update": 111},
-            {"field_name": "LACD TJ2", "cell_to_update": "J87", "value_to_update": 66},
-            {"field_name": "LACD TJ3", "cell_to_update": "J88", "value_to_update": 24},
-            {"field_name": "LACD TJ4", "cell_to_update": "J89", "value_to_update": ""},
-            {"field_name": "DSIT TJ1", "cell_to_update": "J91", "value_to_update": 107},
-            {"field_name": "DSIT TJ2", "cell_to_update": "J92", "value_to_update": 62},
-            {"field_name": "DSIT TJ3", "cell_to_update": "J93", "value_to_update": 20},
-            {"field_name": "DSIT TJ4", "cell_to_update": "J94", "value_to_update": ""}
+            {"field_name": "In-Slips Threshold", "dynamodb_key": "inSlipsThreshold", "cell_to_update": "J61"},
+            {"field_name": "Rotary On Threshold", "dynamodb_key": "rotaryOnThreshold", "cell_to_update": "J62"},
+            {"field_name": "Drillpipe Body Diameter", "dynamodb_key": "drillpipeBodyDiameter", "cell_to_update": "J63"},
+            {"field_name": "Tool Joint Diameter", "dynamodb_key": "toolJointDiameter", "cell_to_update": "J64"},
+            {"field_name": "Tool Joint Length / Block Size", "dynamodb_key": "toolJointLengthOrBlockSize", "cell_to_update": "J65"},
+            {"field_name": "Detection Factor", "dynamodb_key": "detectionFactor", "cell_to_update": "J66"},
+            {"field_name": "Number of TJ Positions", "dynamodb_key": "numberOfTJPositions", "cell_to_update": "J67"},
+            {"field_name": "Tool Joint Contact Pressure Increase", "dynamodb_key": "toolJointContactPressureIncrease", "cell_to_update": "J68"},
+            {"field_name": "Contact Length, in", "dynamodb_key": "contactLengthIn", "cell_to_update": "J69"},
+            {"field_name": "Flow Block Size", "dynamodb_key": "FlowBlockSize", "cell_to_update": "J71"},
+            {"field_name": "Min Detection Flow Time, s", "dynamodb_key": "minDetectionFlowTimeS", "cell_to_update": "J72"},
+            {"field_name": "Block Denominator", "dynamodb_key": "blockDenominator", "cell_to_update": "J73"},
+            {"field_name": "UACD TJ1", "dynamodb_key": "uACDTJ1", "cell_to_update": "J81"},
+            {"field_name": "UACD TJ2", "dynamodb_key": "uACDTJ2", "cell_to_update": "J82"},
+            {"field_name": "UACD TJ3", "dynamodb_key": "uACDTJ3", "cell_to_update": "J83"},
+            {"field_name": "UACD TJ4", "dynamodb_key": "uACDTJ4", "cell_to_update": "J84"},
+            {"field_name": "LACD TJ1", "dynamodb_key": "lACDTJ1", "cell_to_update": "J86"},
+            {"field_name": "LACD TJ2", "dynamodb_key": "lACDTJ2", "cell_to_update": "J87"},
+            {"field_name": "LACD TJ3", "dynamodb_key": "lACDTJ3", "cell_to_update": "J88"},
+            {"field_name": "LACD TJ4", "dynamodb_key": "lACDTJ4", "cell_to_update": "J89"},
+            {"field_name": "DSIT TJ1", "dynamodb_key": "dSITTJ1", "cell_to_update": "J91"},
+            {"field_name": "DSIT TJ2", "dynamodb_key": "dSITTJ2", "cell_to_update": "J92"},
+            {"field_name": "DSIT TJ3", "dynamodb_key": "dSITTJ3", "cell_to_update": "J93"},
+            {"field_name": "DSIT TJ4", "dynamodb_key": "dSITTJ4", "cell_to_update": "J94"}
         ],
         "macro_to_run": "C_ToolJoints.G_ToolJointsStats"
     }

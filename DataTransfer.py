@@ -1,13 +1,15 @@
+import boto3
 import json
 import os
 import glob
 import pywintypes
 import xlwings as xw
 from Modules.CsvDataTransfer import CsvDataTransfer
+from Modules.DynamodbClient import DynamoDBClient
 from Modules.ExcelDataTransfer import ExcelDataTransfer
 from Modules.ExcelColumnFinder import ExcelColumnFinder
 from Modules.ExcelCellUpdater import ExcelCellUpdater
-from Modules.ExcelValueExtractor import ExcelValueExtractor
+from Modules.JsonDataToDeltaLake import TransferJsonDataToDatabricks
 from Modules.ConfigValidator import ValidateJsonConfigFile
 from Modules.S3Downloader import S3Downloader
 
@@ -82,10 +84,23 @@ class DataTransfer:
                 else:
                     print(f"Unsupported file type '{file_extension}' in folder '{config['input_files_folder']}'.")
 
-            finder = ExcelColumnFinder(wb, config['columns_to_find'])
+            # Get the data from DynamoDB
+            table_name = "app04d2-dev-acd-predict-well-configs"  # replace with your actual table name
+            well_name = "test_well"  # replace with your actual well name
+
+            # Create the session and dynamodb_resource
+            session = boto3.Session(profile_name='226268956475_ApplicationAdministratorAccess')
+            dynamodb_resource = session.resource('dynamodb', region_name='us-east-1')
+            dynamodb_client = DynamoDBClient(table_name, dynamodb_resource)
+            item_key = {"well_name": well_name}
+            response = dynamodb_client.get_single_item(item_key=item_key)
+            item = response["Item"]
+
+            finder = ExcelColumnFinder(wb, config['columns_to_find'], dynamodb_client, well_name)
             finder.find_columns()
 
-            updater = ExcelCellUpdater(wb, config['cells_to_update'])
+            # Pass the data from DynamoDB to the ExcelCellUpdater
+            updater = ExcelCellUpdater(wb, config['cells_to_update'], item)
             updater.update_cells()
 
             try:
@@ -100,14 +115,18 @@ class DataTransfer:
 
             # Save the workbook
             wb.save()
-        
+
         # value extractor config file
         value_extractor_config_file = r"C:\Arun\scripts\python\RunACDSealPredictionMacro\Application\ConfigFiles\field_to_cell_mapping.json"
 
-        # Create an instance of class ExcelValueExtractor and call function extract_values
-        value_extractor = ExcelValueExtractor(wb, value_extractor_config_file)
-        value_extractor.extract_acd_values()
-        value_extractor.extract_dsit_values()
+        databricks_instance = "dbc-eebd97f8-a4cd.cloud.databricks.com"
+        access_token = "dapiaf2c4555394b2427f3095d6a92513a8a"
+        sql_warehouse_id = "87aca86eba59ce73"
+        table_name = "acd_seal_prediction_results"
+
+        # Create an instance of class TransferJsonDataToDatabricks and call function run
+        transfer = TransferJsonDataToDatabricks(wb, value_extractor_config_file, databricks_instance, access_token, sql_warehouse_id, table_name)
+        transfer.run()
 
         # Close the destination workbook after all files have been processed
         wb.close()
